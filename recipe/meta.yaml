@@ -1,5 +1,5 @@
 {% set name = "tag-mne" %}
-{% set version = "0.0.5" %}
+{% set version = "0.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tag_mne-{{ version }}.tar.gz
-  sha256: 49f8641342d7ea228066b2b4979a4cdd6e323762aeb0868dd18fc86360c6e850
+  sha256: 2c0a669efe0eb1a7430d76b703b679d664730b9f496b2e90a692637ca572c20c
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
